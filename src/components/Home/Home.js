@@ -3,7 +3,7 @@
 import './Home.scss';
 
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+/* import { BrowserRouter, Route, Link, Switch } from "react-router-dom"; */
 import { v4 as uuidv4 } from 'uuid';
 //import update from 'immutability-helper';
 
@@ -231,7 +231,7 @@ export default class Home extends React.Component {
 		if (hasWindow) {
 			if (confirm(`Ready to submit ${this.state.history.length} reads?`)) {
 				console.log('submitting results');
-				let api = 'http://localhost:3000/read';
+				let api = env.dev ? 'http://localhost:3000/read' : 'https://meteor-backend.herokuapp.com/read';
 				let body = { ...this.state.currentRead, sessionID: this.state.sessionID, fsr: this.state.fsr };
 				postJSONToEndpoint(api, body);
 				window.sessionStorage.clear();

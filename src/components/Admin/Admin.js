@@ -1,5 +1,7 @@
 import './Admin.scss';
 
+import env from '../../../env';
+
 import React, { Component } from 'react'
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Inner from '../Inner/Inner';
@@ -16,7 +18,7 @@ export default class Admin extends Component {
 
 
     async fetchData() {
-        const url = 'http://localhost:3000/read'
+        const url = env.dev ? 'http://localhost:3000/read' : 'https://meteor-backend.herokuapp.com/read'
         const res = await fetch(url);
         const res2 = await res.json();
         console.log(res2);
