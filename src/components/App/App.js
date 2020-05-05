@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '../Home/Home';
 import Admin from '../Admin/Admin';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { HashRouter, Route, Link, Switch } from "react-router-dom";
 
 function App() {
     return (

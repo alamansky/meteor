@@ -6,6 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node_modules/.bin/webpack-dev-server --mode development --config webpack.config.js --hot --history-api-fallback --host 0.0.0.0",
+		"predeploy": "webpack",
 		"deploy": "gh-pages -d dist"
 	},
 	"repository": {
@@ -18,7 +19,7 @@
 	"bugs": {
 		"url": "https://github.com/Alamansky/javascript-boilerplates/issues"
 	},
-	"homepage": "https://github.com/Alamansky/javascript-boilerplates#readme",
+	"homepage": "https://alamansky.github.io/meteor/",
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
 		"@babel/preset-env": "^7.0.0-beta.51",
