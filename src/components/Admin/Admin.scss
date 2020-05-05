@@ -1,0 +1,23 @@
+@import '../../utility_styles/utilities';
+
+.session-report {
+    background-color: rgba(c(blck), 0.1);
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+&__details {
+    display: flex;
+    width: 50%;
+
+    & > * {
+        margin-right: 1rem;
+        flex: 0.5;
+        text-align: left;
+    }
+}
+
+}
+
+.bold {
+    font-weight: 600;
+}

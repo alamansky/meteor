@@ -1,0 +1,23 @@
+/** @format */
+
+@import '../../utility_styles/utilities';
+
+body {
+	background-color: rgba(c(wht), 1);
+	font-family: sans-serif;
+}
+
+.app {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	min-width: 800px;
+}
+
+.button--primary  {
+	@include button();
+	background-color: rgba(c(wht), 1)
+}

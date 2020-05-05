@@ -1,0 +1,14 @@
+@import '../../utility_styles/utilities';
+
+
+.counter {
+    height: 50px;
+    width: 50px;
+    top: 5rem;
+    right: 5rem;
+    border: 2px solid rgba(c(blck), 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

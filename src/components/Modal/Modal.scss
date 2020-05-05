@@ -1,0 +1,29 @@
+/** @format */
+
+@import '../../utility_styles/utilities';
+
+.modal {
+	background-color: rgba(c(blck), 0.1);
+	margin: 0 auto;
+	text-align: center;
+	padding: 5px 20px;
+	transition: 1s all ease;
+	animation: fadeIn 0.5s ease;
+
+	&__header {
+		display: visible;
+	}
+
+	&__body {
+		white-space: pre-wrap;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

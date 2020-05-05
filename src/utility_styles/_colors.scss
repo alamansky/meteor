@@ -1,0 +1,18 @@
+/** @format */
+
+$colors: (
+	blck: #000,
+	gry: #2f2f2f,
+	wht: #fff,
+	grn: #4a9130,
+	rd: #aa4f39,
+);
+
+@function c($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key);
+	}
+
+	@warn 'Unknown `#{$key}` in $colors.';
+	@return null;
+}

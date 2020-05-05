@@ -1,0 +1,13 @@
+# @format
+
+version: '3'
+services:
+  app:
+    image: node:latest
+    working_dir: /usr/src/app
+    tty: true # keep container alive without default command
+    ports:
+      - '8080:8080'
+    volumes: ['./:/usr/src/app', 'node-modules:/usr/src/app/node_modules']
+volumes:
+  node-modules:

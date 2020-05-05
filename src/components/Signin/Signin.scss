@@ -1,0 +1,28 @@
+@import '../../utility_styles/utilities';
+
+.signin__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(c(blck), 0.1);
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.signin__form {
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+
+    > * {
+        margin-right: 1rem;
+    }
+
+    form fieldset {
+        > * {
+            margin: 1rem;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/** @format */
+
+@import './colors.scss';
+
+@mixin flex-row($width, $spacing) {
+	display: flex;
+	justify-content: $spacing;
+	width: $width;
+	margin-bottom: 30px;
+}
+
+@mixin button() {
+	padding: 0.5rem 1rem;
+	border: 1px solid rgba(c(blck), 0.2);
+	transition: 0.2s all ease;
+
+	&:hover {
+		cursor: pointer;
+		border: 1px solid rgba(c(blck), 0.8);
+	}
+}

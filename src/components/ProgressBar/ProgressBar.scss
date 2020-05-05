@@ -1,0 +1,35 @@
+/** @format */
+
+@import '../../utility_styles/utilities';
+
+.progress-bar {
+	@include flex-row(100%, flex-start);
+
+	height: 50px;
+	border: 1px solid rgba(c(blck), 0.1);
+
+	&__increment {
+		height: 50px;
+		width: 1%;
+		border: 1px solid rgba(c(wht), 0.2);
+		transition: 0.2s ease all;
+
+		&--correct {
+			background-color: rgba(c(grn), 1);
+
+			&:hover {
+				background-color: rgba(c(grn), 0.5);
+			}
+		}
+		&--incorrect {
+			background-color: rgba(c(rd), 1);
+
+			&:hover {
+				background-color: rgba(c(rd), 0.5);
+			}
+		}
+		&--active {
+			transform: translateY(10px);
+		}
+	}
+}
