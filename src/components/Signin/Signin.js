@@ -23,9 +23,9 @@ export default class Signin extends Component {
         let hasWindow = Boolean(window);
         if (hasWindow) {
             let fsr = sessionStorage.getItem('currentSessionFSR');
+            console.log(fsr);
             if (fsr) {
-                this.setState({ disabled: true, fsr: fsr, open: true });
-                this.props.liftState(this.state.fsr);
+                this.setState({ disabled: true, fsr: fsr, open: true }, () => this.props.liftState(this.state.fsr));
             }
         }
     }
@@ -74,7 +74,7 @@ export default class Signin extends Component {
                         {this.state.open && this.props.children}
                     </div>
                 </div>
-                <Menu clearResults={this.logout} submitResults={this.props.submitResults} />
+                {this.state.open && <Menu clearResults={this.logout} submitResults={this.props.submitResults} />}
             </React.Fragment>
         )
     }

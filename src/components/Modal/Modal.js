@@ -57,7 +57,7 @@ export default function Modal(props) {
 				<React.Fragment>
 					<p>{`You are viewing read #${Number(props.activeHistoryIndex) + 1}`}</p>
 					<p>{`This read was ${props.currentRead.correct ? 'correct' : 'incorrect'}`}</p>
-					<button onClick={props.exitHistoryMode}>Resume</button>
+					<button className="button--primary" onClick={props.exitHistoryMode}>Resume</button>
 				</React.Fragment>
 			);
 			break;

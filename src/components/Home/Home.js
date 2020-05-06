@@ -313,8 +313,9 @@ export default class Home extends React.Component {
 		}
 	}
 
-	liftSigninState(fsr) {
-		this.setState({ fsr });
+	liftSigninState(childfsr) {
+		console.log(childfsr);
+		this.setState({ fsr: childfsr });
 	}
 
 	render() {
