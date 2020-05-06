@@ -18,6 +18,7 @@ import Counter from '../Counter/Counter';
 import Menu from '../Menu/Menu';
 
 import postJSONToEndpoint from '../../util/postJSONToEndpoint';
+import env from '../../../env';
 
 export default class Home extends React.Component {
 	constructor(props) {
@@ -232,7 +233,7 @@ export default class Home extends React.Component {
 			if (confirm(`Ready to submit ${this.state.history.length} reads?`)) {
 				console.log('submitting results');
 				let api = env.dev ? 'http://localhost:3000/read' : 'https://meteor-backend.herokuapp.com/read';
-				let body = { ...this.state.currentRead, sessionID: this.state.sessionID, fsr: this.state.fsr };
+				let body = { history: this.state.history, sessionID: this.state.sessionID, fsr: this.state.fsr };
 				postJSONToEndpoint(api, body);
 				window.sessionStorage.clear();
 				this.setState({ history: [] });

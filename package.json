@@ -5,8 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node_modules/.bin/webpack-dev-server --mode development --config webpack.config.js --hot --history-api-fallback --host 0.0.0.0",
-		"predeploy": "webpack",
+		"start": "node_modules/.bin/webpack-dev-server --mode development --config webpack.config.js --hot --history-api-fallback --host 0.0.0.0 --define DEV=true",
+		"build": "webpack --define DEV=false",
+		"predeploy": "webpack --define DEV=false",
 		"deploy": "gh-pages -d dist"
 	},
 	"repository": {
