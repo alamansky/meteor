@@ -73,9 +73,10 @@ export default function Modal(props) {
 			message = (
 				<React.Fragment>
 					<h2 className='modal__header'>Session Submitted!</h2>
-					<p>You may close this window or press enter to start another session.</p>
+					<p className='modal__body'>{`Click "Reset" button to change FSR.\n\nPress Enter to begin another session.`}</p>
 				</React.Fragment>
 			)
+			break;
 		case 6:
 			message = (
 				<React.Fragment>
@@ -84,6 +85,7 @@ export default function Modal(props) {
 					<p>Press Enter to Continue</p>
 				</React.Fragment>
 			)
+			break;
 		default:
 			null;
 	}

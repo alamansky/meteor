@@ -206,7 +206,7 @@ export default class Home extends React.Component {
 		const hasWindow = Boolean(window);
 
 		if (hasWindow) {
-			if (confirm('Are you sure you want to resest? Your progress will not be saved or submitted.')) {
+			if (confirm('Are you sure you want to resest? Your current progress will not be saved or submitted.')) {
 				window.sessionStorage.clear();
 				this.setState({
 					fsr: '',
