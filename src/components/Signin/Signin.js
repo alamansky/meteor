@@ -63,6 +63,7 @@ export default class Signin extends Component {
                                         <input title={this.state.disabled ? "Click reset button at bottom of screen to change FSR" : null} ref={(input) => { this.fsrInput = input; }} type='text' name='fsr' placeholder='Enter Your FSR Here' value={this.state.fsr} disabled={this.state.disabled} onChange={(e) => this.setState({ fsr: e.target.value })} />
                                     </label>
                                     <button className='button--primary' type='submit' disabled={this.state.disabled}>Start</button>
+                                    {this.state.open && <Menu clearResults={this.logout} submitResults={this.props.submitResults} />}
                                 </fieldset>
                             </form>
                         </span>
@@ -73,7 +74,7 @@ export default class Signin extends Component {
                         {this.state.open && this.props.children}
                     </div>
                 </div>
-                {this.state.open && <Menu clearResults={this.logout} submitResults={this.props.submitResults} />}
+                {/* {this.state.open && <Menu clearResults={this.logout} submitResults={this.props.submitResults} />} */}
             </React.Fragment>
         )
     }

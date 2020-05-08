@@ -91,7 +91,7 @@ export default function Modal(props) {
 				<React.Fragment>
 					<h2 className='modal__header'>Correct</h2>
 					<p>You have completed 100 reads.</p>
-					<p>Click "Submit" button below.</p>
+					<p>Click "Submit All Reads" button.</p>
 				</React.Fragment>
 			)
 			break;
@@ -100,7 +100,7 @@ export default function Modal(props) {
 				<React.Fragment>
 					<h2 className='modal__header'>Incorrect</h2>
 					<p>You have completed 100 reads.</p>
-					<p>Click "Submit" button below.</p>
+					<p>Click "Submit All Reads" button.</p>
 				</React.Fragment>
 			)
 			break;

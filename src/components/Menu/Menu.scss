@@ -1,13 +1,13 @@
 @import '../../utility_styles/utilities';
 
 #menu {
-    @include flex-row(100%, center);
+    /* @include flex-row(100%, center);
     position: fixed;
     bottom: 0;
     width: 50%;
-    min-width:800px;
-    padding: 2rem;
-    background-color: rgba(c(blck), 0.1);
+    min-width:800px; */
+    /* padding: 2rem; */
+    /* background-color: rgba(c(blck), 0.1); */
 
     > * {
         margin-right:1rem;

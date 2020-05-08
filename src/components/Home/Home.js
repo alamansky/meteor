@@ -348,7 +348,7 @@ export default class Home extends React.Component {
 							number={4}
 						/>
 						<Slider inputFocus={this.state.inputFocus} />
-						<div style={{ marginBottom: '1rem', textAlign: 'center', width: '100%', opacity: !this.state.currentRead.userRead.includes(null) ? 1 : 0 }}>Press Enter to Grade Read</div>
+						<div style={{ marginBottom: '1rem', textAlign: 'center', width: '100%', opacity: !this.state.currentRead.userRead.includes(null) && !this.state.historyMode.inputsDisabled ? 1 : 0 }}>Press Enter to Grade Read</div>
 						<Modal
 							message={this.state.modal.message}
 							active={this.state.modal.isActive}
