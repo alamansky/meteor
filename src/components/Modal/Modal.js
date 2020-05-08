@@ -86,6 +86,24 @@ export default function Modal(props) {
 				</React.Fragment>
 			)
 			break;
+		case 7:
+			message = (
+				<React.Fragment>
+					<h2 className='modal__header'>Correct</h2>
+					<p>You have completed 100 reads.</p>
+					<p>Click "Submit" button below.</p>
+				</React.Fragment>
+			)
+			break;
+		case 8:
+			message = (
+				<React.Fragment>
+					<h2 className='modal__header'>Incorrect</h2>
+					<p>You have completed 100 reads.</p>
+					<p>Click "Submit" button below.</p>
+				</React.Fragment>
+			)
+			break;
 		default:
 			null;
 	}

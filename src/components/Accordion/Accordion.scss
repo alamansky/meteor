@@ -1,0 +1,15 @@
+@import '../../utility_styles/utilities';
+
+.accordion {
+    background-color: rgba(c(blck), 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    &__title {
+        margin: 2rem 0 2rem 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

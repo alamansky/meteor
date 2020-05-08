@@ -16,6 +16,7 @@ import Signin from '../Signin/Signin';
 import Inner from '../Inner/Inner';
 import Counter from '../Counter/Counter';
 import Menu from '../Menu/Menu';
+import NoMobile from '../NoMobile/NoMobile';
 
 import postJSONToEndpoint from '../../util/postJSONToEndpoint';
 import env from '../../../env';
@@ -272,10 +273,18 @@ export default class Home extends React.Component {
 					this.updateModal(6, true);
 					return;
 				} else if (this.compareNumbers()) {
-					this.updateModal(1, true);
+					if (this.state.history.length == 99) {
+						this.updateModal(7, true);
+					} else {
+						this.updateModal(1, true);
+					}
 					this.scoreRead(true);
 				} else {
-					this.updateModal(2, true);
+					if (this.state.history.length == 99) {
+						this.updateModal(8, true);
+					} else {
+						this.updateModal(2, true);
+					}
 					this.scoreRead(false);
 				}
 				this.addReadToHistory();
@@ -321,6 +330,7 @@ export default class Home extends React.Component {
 	render() {
 		return (
 			<Inner>
+				<NoMobile></NoMobile>
 				<Signin liftState={this.liftSigninState} count={this.state.history.length} clearResults={this.clearResults} submitResults={this.submitResults}>
 					<div className='app'>
 						<ProgressBar
@@ -351,6 +361,7 @@ export default class Home extends React.Component {
 					</div>
 				</Signin>
 			</Inner>
+
 		);
 	}
 }
