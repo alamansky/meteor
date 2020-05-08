@@ -121,6 +121,9 @@ export default class Home extends React.Component {
 				},
 			};
 		});
+		/* if (!this.state.currentRead.userRead.includes(null)) {
+			this.updateModal(9, true);
+		} */
 	}
 
 	scoreRead(readCorrect) {
@@ -345,6 +348,7 @@ export default class Home extends React.Component {
 							number={4}
 						/>
 						<Slider inputFocus={this.state.inputFocus} />
+						<div style={{ marginBottom: '1rem', textAlign: 'center', width: '100%', opacity: !this.state.currentRead.userRead.includes(null) ? 1 : 0 }}>Press Enter to Grade Read</div>
 						<Modal
 							message={this.state.modal.message}
 							active={this.state.modal.isActive}
@@ -354,6 +358,7 @@ export default class Home extends React.Component {
 							currentRead={this.state.currentRead}
 							inputFocus={this.state.inputFocus}
 						/>
+
 						{/* <Menu clearResults={this.clearResults} submitResults={this.submitResults} /> */}
 					</div>
 				</Signin>

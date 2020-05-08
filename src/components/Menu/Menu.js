@@ -7,7 +7,7 @@ export default class Menu extends Component {
         return (
             <div id='menu'>
                 <button className='button--primary' onClick={this.props.clearResults}>Reset</button>
-                <button className='button--primary' onClick={this.props.submitResults}>Submit</button>
+                <button className='button--primary' onClick={this.props.submitResults}>Submit All Reads</button>
             </div>
         )
     }

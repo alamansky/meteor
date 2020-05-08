@@ -104,6 +104,14 @@ export default function Modal(props) {
 				</React.Fragment>
 			)
 			break;
+		case 9:
+			message = (
+				<React.Fragment>
+					{/* <h2 className='modal__header'>Incorrect</h2> */}
+					<p>Press Enter.</p>
+				</React.Fragment>
+			)
+			break;
 		default:
 			null;
 	}
