@@ -109,7 +109,6 @@ export default class Home extends React.Component {
 				},
 			};
 		});
-		console.log(e.target.value == this.state.currentRead.read[inputFocus]);
 
 		let newUserRead = this.state.currentRead.userRead;
 		newUserRead[inputFocus] = Number(e.target.value);
@@ -232,7 +231,6 @@ export default class Home extends React.Component {
 
 		if (hasWindow) {
 			if (confirm(`Ready to submit ${this.state.history.length} reads?`)) {
-				console.log('submitting results');
 				let api = env.dev ? 'http://localhost:3000/read' : 'https://meteor-backend.herokuapp.com/read';
 				let body = { history: this.state.history, sessionID: this.state.sessionID, fsr: this.state.fsr };
 				postJSONToEndpoint(api, body);
@@ -323,7 +321,6 @@ export default class Home extends React.Component {
 	}
 
 	liftSigninState(childfsr) {
-		console.log(childfsr);
 		this.setState({ fsr: childfsr });
 	}
 

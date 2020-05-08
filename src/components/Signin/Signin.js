@@ -23,7 +23,6 @@ export default class Signin extends Component {
         let hasWindow = Boolean(window);
         if (hasWindow) {
             let fsr = sessionStorage.getItem('currentSessionFSR');
-            console.log(fsr);
             if (fsr) {
                 this.setState({ disabled: true, fsr: fsr, open: true }, () => this.props.liftState(this.state.fsr));
             }
