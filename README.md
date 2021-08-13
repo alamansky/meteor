@@ -1,2 +1,3 @@
-# javascript-boilerplates
-Starter kits for javascript-based projects.
+# Meteor
+
+Training software for reading 4-dial natural gas meters.
